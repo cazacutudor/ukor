@@ -34,10 +34,9 @@ let options = {
   flavor,
   roku,
   auth,
-  name: ''
 }
 for (let key in options) {
-  if (!options[key] && key != 'name') {
+  if (!options[key]) {
     log.error('%s options is undefined')
     log.pretty('error', 'options:', options)
     process.exit(-1)
